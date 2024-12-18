@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulačka</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Akciová kalkulačka</h1>
+
+        <!-- Vyhledávací pole -->
+        <div class="search-container">
+            <input type="text" id="tickerInput" placeholder="Vložte ticker např. AAPL">
+            <button onclick="searchStock()">Hledat</button>
+        </div>
+
+        <!-- Detaily akcie -->
+        <div id="stockDetails" class="details-container">
+            <h2>Informace o Akcii</h2>
+            <p><strong>Společnost:</strong> <span id="companyName">N/A</span></p>
+            <p><strong>P/E Ratio:</strong> <span id="peRatio">N/A</span></p>
+            <p><strong>Graham Number:</strong> <span id="grahamNumber">N/A</span></p>
+            <p><strong>Adam Index:</strong> <span id="indexScore" class="index-score">N/A</span></p>
+            <button onclick="addToFavorites()">Přidat do oblíbených</button>
+        </div>
+
+        <!-- Oblíbené akcie -->
+        <div class="favorites-container">
+            <h2>Oblíbené akcie</h2>
+            <ul id="favoritesList"></ul>
+        </div>
+
+        <!-- Top S&P 500 akcie -->
+        <div class="top-stocks-container">
+            <h2>Top S&P 500 Akcie</h2>
+            <ul>
+                <a href="https://finance.yahoo.com/quote/AAPL/"><li>AAPL - Apple</li></a>
+                <a href="https://finance.yahoo.com/quote/MSFT/"><li>MSFT - Microsoft</li></a>
+                <a href="https://finance.yahoo.com/quote/AMZN/"><li>AMZN - Amazon</li></a>
+                <a href="https://finance.yahoo.com/quote/GOOGL/"><li>GOOGL - Google</li></a>
+                <a href="https://finance.yahoo.com/quote/BRK-B/"><li>BRK-B - Berkshire Hataway</li></a>
+                <a href="https://finance.yahoo.com/quote/TSLA/"><li>TSLA - Tesla</li></a>
+                <a href="https://finance.yahoo.com/quote/META/"><li>META - Meta Group</li></a>
+                <a href="https://finance.yahoo.com/quote/UNH/"><li>UNH - UnitedHealth Group</li></a>
+                <a href="https://finance.yahoo.com/quote/LLY/"><li>LLY - Eli Lilly</li></a>
+                <a href="https://finance.yahoo.com/quote/NVDA/"><li>NVDA - NVIDIA Corp.</li></a>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
